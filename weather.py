@@ -1,8 +1,6 @@
-import pyodbc
 import tkinter as tk
 import requests
 import time
-
 
 def get_weather(ciudad1: str):
     try:
@@ -38,17 +36,6 @@ def get_weather(ciudad1: str):
 
 
 if __name__ == '__main__':
-
-    server = 'PAVILON-ADRIAN\SQLSERVER2016'
-    db = 'appClima'
-    usuario  = 'clima'
-    contraseña = '123456'
- 
-    conexion = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER='+server+';DATABASE='+db+';UID='+usuario+'PWD='+contraseña)
-    print('yei')
-
-    
-
     #get_weather('saltillo')
     """canvas = tk.Tk()
     canvas.geometry("600x500")
