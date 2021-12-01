@@ -9,4 +9,6 @@ install:
   
 script:
   - python3 app_test.py
+  - python3 app_integracion_test.py
   - pytest app_test.py
+  - pytest app_integracion_test.py

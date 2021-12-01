@@ -5,6 +5,7 @@ import time
 def get_weather(ciudad1: str):
     try:
         #ciudad = textfield.get()
+        global temp
         ciudad = ciudad1
         api = "http://api.openweathermap.org/data/2.5/weather?q="+ciudad+"&appid=eaf6b3576ac41a0c689053e2ac87d22f"
         json_data = requests.get(api).json()
@@ -34,6 +35,26 @@ def get_weather(ciudad1: str):
         print(resultado)
         return resultado
 
+
+def convertirGrados():
+    try:
+        enGrados = temp
+        enGrados2 = int(enGrados)
+        gradosSTR = str(enGrados)
+        convertido = ((enGrados2 * 9/5) + 32 )
+        convertido2 = str(convertido)
+        
+        print("Temperatura "+gradosSTR+ "°C convertido a Farenheit = " + convertido2+"°F")
+
+        resultado = "Exito"
+        print(resultado)
+        return resultado
+    except:
+        fallo = "Error al convertir"
+        print(fallo)
+        return(fallo)
+   
+    
 
 if __name__ == '__main__':
     #get_weather('saltillo')
