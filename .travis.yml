@@ -1,0 +1,11 @@
+language : python
+
+python:
+  - 3.8        install:
+  - pip install pyodbc
+  - pip install requests
+  - pip install openpyxl
+  
+script:
+  - python3 app_test.py
+  - pytest app_test.py
